@@ -1,0 +1,7 @@
+.oculto {
+    display: none;
+}
+
+.visible {
+  visibility: visible;
+}

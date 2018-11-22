@@ -1,0 +1,10 @@
+<h1>REGISTRA USUARIO</h1>
+<form (ngSubmit)="onSubmit(userForm);" #userForm="ngForm">
+    <input placeholder="Nombre" #username maxlength="80" [(ngModel)]="user.nombre" name="Nombre" required/>
+    <input placeholder="Apellido" #username maxlength="80" [(ngModel)]="user.apellido" name="Apellido" required/>
+    <input placeholder="Username" #username maxlength="80" [(ngModel)]="user.username" name="Username" required/>
+    <input placeholder="Password" #username maxlength="80" [(ngModel)]="user.password" name="Password" required/>
+
+    <button>Registrar usuario</button>
+    <button type="button" (click)="limpiar(userForm)">Limpiar</button>
+</form>

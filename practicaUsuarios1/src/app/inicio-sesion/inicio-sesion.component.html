@@ -1,0 +1,23 @@
+
+<div [ngClass]="getCSSClasses(datos && datos.mensaje)">
+  <h1>INICIA SESIÓN</h1>
+  <form (ngSubmit)="onSubmit(userForm);" #userForm="ngForm">
+      <input placeholder="Username" #username maxlength="80" [(ngModel)]="user.username" name="Username" required/>
+      <input placeholder="Password" #username maxlength="80" [(ngModel)]="user.password" name="Password" required/>
+
+      <button>Enviar</button>
+      <button type="button" (click)="limpiar(userForm)">Limpiar</button>
+  </form>
+</div>
+      <!--<p>Nombre: {{datos.code}}</p>
+      <p>Apellido: {{datos.mensaje}}</p>-->
+
+<ul>
+    <li *ngFor="let dato of listaUser">
+      <p>Nombre: {{dato.nombre}}</p>
+      <p>Apellido: {{dato.apellido}}</p>
+      <p>Username: {{dato.username}}</p>
+      <p>Password: {{dato.password}}</p>
+    </li>
+
+  </ul>
